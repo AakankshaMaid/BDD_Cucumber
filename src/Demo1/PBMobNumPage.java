@@ -2,6 +2,7 @@ package Demo1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.v109.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,15 +14,16 @@ public class PBMobNumPage {
 	{
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void inputPBMobNumPagemobnum()
+	public void inputPBMobNumPagemobnum(String num)
 	{
-		mobnum.sendKeys("7020500587");
+		mobnum.sendKeys(num);
 	}
 	public void clickPBMobNumPagesigninwithpwd()
 	{
 		signinwithpwd.click();
 	}
+
+	
 	
 
 }

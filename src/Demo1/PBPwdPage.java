@@ -7,19 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PBPwdPage {
 	@FindBy(xpath="//input[@id='central-login-password']")private WebElement pwd;
-	@FindBy(xpath="//span[text()='Sign in']")private WebElement signin;
+	@FindBy(xpath="//span[text()='Sign in']")private WebElement sigin;
 	
 	public PBPwdPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
-	public void inputPBPwdPagepwd()
+	public void inputPBPwdPagepwd(String pw)
 	{
-		pwd.sendKeys("Sanjay@23");
+		pwd.sendKeys(pw);
 	}
-	public void clickPBPwdPagesignin()
+	public void clickPBPwdPagesigin()
 	{
-		signin.click();
+		sigin.click();
 	}
+	
 
 }
